@@ -14,8 +14,6 @@ use App\Http\Controllers\CustomersController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\CustomersController@index');
 
 Route::resource('customers', CustomersController::class);
